@@ -1,0 +1,32 @@
+.stack {
+  padding: 0 1rem;
+  .skills-container {
+    .skill-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      img {
+        width: 50px;
+        border: 1px solid black;
+        margin-right: 0.5rem;
+      }
+
+      .skill-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .skill-title {
+          margin: 0;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+
+        .skill-description {
+          margin: 0;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

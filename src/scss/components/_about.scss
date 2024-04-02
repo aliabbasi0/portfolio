@@ -1,0 +1,51 @@
+.site-about {
+  padding: 0 1rem;
+
+  // my portrait
+  .wp-image-151 {
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    border: 3px solid black;
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  // the accordion item
+  .chakra-accordion__item {
+    line-height: 1.5;
+    button {
+      background-color: transparent;
+      border: none;
+      border-top: 2px solid #cdd6e2;
+      border-radius: 0.375rem;
+      display: flex;
+      font-size: 1.2rem;
+      font-weight: 500;
+      justify-content: space-between;
+      padding: 1rem;
+      cursor: pointer;
+      &:hover {
+        border-color: #cd669a;
+      }
+    }
+  }
+
+  .chakra-collapse {
+    strong {
+      display: block;
+    }
+  }
+
+  .css-1ggg8my {
+    span {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 1rem;
+    }
+  }
+}

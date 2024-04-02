@@ -1,7 +1,7 @@
+import Header from "./components/Header";
 import Home from "./components/Home";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import ProjectDetails from "./components/ProjectDetails";
+import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import "./scss/styles.scss";
 
@@ -10,9 +10,7 @@ function App() {
 
   return (
     <div>
-      <header className="site-header">
-        <Nav />
-      </header>
+      <Header />
       <main className="site-main">
         <Routes>
           <Route path="/" element={<Home restBase={restBase} />} />
