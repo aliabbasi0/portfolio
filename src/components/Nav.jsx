@@ -1,4 +1,3 @@
-import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
 function Nav() {
@@ -6,22 +5,22 @@ function Nav() {
     <nav className="site-nav">
       <ul>
         <li>
-          <Link smooth to="#hero">
+          <Link smooth to="/#hero">
             Home
           </Link>
         </li>
         <li>
-          <Link smooth to="#portfolio">
+          <Link smooth to="/#portfolio">
             Portfolio
           </Link>
         </li>
         <li>
-          <Link smooth to="#stack">
+          <Link smooth to="/#stack">
             Stack
           </Link>
         </li>
         <li>
-          <Link smooth to="#about">
+          <Link smooth to="/#about">
             About
           </Link>
         </li>

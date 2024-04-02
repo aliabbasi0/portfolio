@@ -14,7 +14,10 @@ function App() {
       <main className="site-main">
         <Routes>
           <Route path="/" element={<Home restBase={restBase} />} />
-          <Route path="/projects/:projectId" element={<ProjectDetails />} />
+          <Route
+            path="/project/:slug"
+            element={<ProjectDetails restBase={restBase} />}
+          />
         </Routes>
       </main>
       <Footer />

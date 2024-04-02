@@ -1,0 +1,11 @@
+.site-single {
+}
+
+@media screen and (min-width: 768px) {
+  .site-single {
+    h1 {
+      margin-top: 5rem;
+      color: red;
+    }
+  }
+}

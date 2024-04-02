@@ -19,7 +19,7 @@ function About({ restData }) {
   return (
     <section id="about" className="site-about">
       <h1>About</h1>
-      <Accordion defaultIndex={[0]} allowMultiple>
+      <Accordion allowMultiple>
         {restData.acf?.accordion_item?.map((item, index) => {
           return (
             <AccordionItem key={index}>

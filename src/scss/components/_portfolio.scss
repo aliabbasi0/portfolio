@@ -1,3 +1,17 @@
 .site-portfolio {
   padding: 0 1rem;
+  .portfolio-container {
+    display: flex;
+    .portfolio-item {
+      img {
+        width: 300px;
+        height: 200px;
+      }
+      h2 {
+      }
+      p {
+        
+      }
+    }
+  }
 }

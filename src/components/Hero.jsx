@@ -1,13 +1,11 @@
-function Hero({ restData, restMedia }) {
+function Hero({ restData }) {
   return (
     <section id="hero" className="site-hero">
       <div className="site-hero__logo">
         <span className="opening">&lt;&gt;</span>
-        <img
-          src={restMedia?.[0]?.media_details?.sizes?.full?.source_url}
-          alt="logo"
-          referrerpolicy="off"
-        />
+        {restData.acf && restData.acf.logo && (
+          <img src={restData.acf.logo.url} alt="Logo" referrerPolicy="off" />
+        )}
         <span className="closing">&lt;/&gt;</span>
       </div>
       <div className="site-hero__content">
@@ -19,7 +17,6 @@ function Hero({ restData, restMedia }) {
         <p className="qualification">
           {restData.acf ? restData.acf.qualification : ""}
         </p>
-        
       </div>
     </section>
   );

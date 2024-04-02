@@ -1,4 +1,51 @@
 footer {
   text-align: center;
   font-size: small;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      display: inline;
+      margin: 0 0.5rem;
+
+      img {
+        width: 2rem;
+      }
+    }
+  }
+}
+
+.emailTooltipContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .emailIcon {
+    cursor: pointer;
+  }
+
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: 180px;
+    background-color: black;
+    color: #ff40a0;
+    letter-spacing: 0.4pt;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: default;
+    transition: visibility 0s linear 0.25s, opacity 0.15s linear;
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+  }
 }
