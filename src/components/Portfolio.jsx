@@ -21,21 +21,22 @@ function Portfolio({ restBase }) {
   return (
     <section id="portfolio" className="site-portfolio">
       <h1>Portfolio</h1>
-      <div className="portfolio-container">
+      <div className="gallery">
         {restProjects.length > 0 ? (
           restProjects.map((project) => (
-            <div className="portfolio-item" key={project.id}>
-              {project._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
-                <Link to={`/project/${project.slug}`}>
-                  <img
-                    src={project._embedded["wp:featuredmedia"][0].source_url}
-                    alt={`Featured image for ${project.title}`}
-                  />
-                </Link>
-              )}
-              <h2>{project.title?.rendered}</h2>
-              <p>{project.acf["project_description"]}</p>
-            </div>
+            <Link to={`/project/${project.slug}`} key={project.id}>
+              <article className="card" >
+                {project._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
+                  <figure>
+                    <img
+                      src={project._embedded["wp:featuredmedia"][0].source_url}
+                      alt={`Featured image for ${project.title}`}
+                    />
+                    <figcaption>{project.title?.rendered}</figcaption>
+                  </figure>
+                )}
+              </article>
+            </Link>
           ))
         ) : (
           <p>No projects found.</p>

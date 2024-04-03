@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 function ProjectDetails({ restBase }) {
   const { slug } = useParams();
-  const restPath = `${restBase}wp-json/wp/v2/project?slug=${slug}&_embed`;
+  const restPath = `${restBase}wp-json/wp/v2/project?slug=${slug}&_embed&acf_format=standard`;
   const [restData, setData] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -23,6 +23,8 @@ function ProjectDetails({ restBase }) {
     fetchData();
   }, [restPath]);
 
+  // {restData._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
+
   return (
     <section className="page-single">
       {loading ? (
@@ -30,7 +32,7 @@ function ProjectDetails({ restBase }) {
       ) : (
         <div>
           <img
-            src={restData._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
+            src={restData.acf?.["project_image"].url}
             alt={`Featured image for ${restData.title?.rendered}`}
           />
           <h1>{restData.acf?.["project_title"]}</h1>

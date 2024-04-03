@@ -40,7 +40,6 @@ function Stack({ restBase }) {
       if (response.ok) {
         const data = await response.json();
         setTools(data);
-        console.log(data);
       }
     };
     fetchTools();

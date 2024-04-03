@@ -1,4 +1,4 @@
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import HomeIcon from "../assets/home-icon.svg";
 import PortfolioIcon from "../assets/portfolio-icon.svg";
 import StackIcon from "../assets/stack-icon.svg";
@@ -18,40 +18,40 @@ function Nav() {
     <nav className="site-nav">
       <ul>
         <li>
-          <Link smooth to="/#hero">
+          <HashLink smooth to="/#hero">
             {isMobile ? (
               <img loading="lazy" src={HomeIcon} alt="Home Icon" />
             ) : (
               <span>Home</span>
             )}
-          </Link>
+          </HashLink>
         </li>
         <li>
-          <Link smooth to="/#portfolio">
+          <HashLink smooth to="/#portfolio">
             {isMobile ? (
               <img loading="lazy" src={PortfolioIcon} alt="Portfolio Icon" />
             ) : (
               <span>Portfolio</span>
             )}
-          </Link>
+          </HashLink>
         </li>
         <li>
-          <Link smooth to="/#stack">
+          <HashLink smooth to="/#stack">
             {isMobile ? (
               <img loading="lazy" src={StackIcon} alt="Stack Icon" />
             ) : (
               <span>Stack</span>
             )}
-          </Link>
+          </HashLink>
         </li>
         <li>
-          <Link smooth to="/#about">
+          <HashLink smooth to="/#about">
             {isMobile ? (
               <img loading="lazy" src={AboutIcon} alt="About Icon" />
             ) : (
               <span>About</span>
             )}
-          </Link>
+          </HashLink>
         </li>
       </ul>
     </nav>

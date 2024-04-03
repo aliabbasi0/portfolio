@@ -1,30 +1,23 @@
-.site-portfolio {
-  padding: 0 1rem;
-  .portfolio-container {
-    display: block;
-    .portfolio-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      img {
-        width: 300px;
-        height: 200px;
-      }
-      h2 {
-      }
-      p {
-      }
-    }
+.page-single {
+  h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    line-height: 1.5;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .site-portfolio {
-    .portfolio-container {
-      display: flex;
-      .portfolio-item {
-      }
-    }
+  .page-single {
+    margin-top: 0;
   }
 }
