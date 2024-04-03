@@ -33,7 +33,7 @@ function Portfolio({ restBase }) {
                   />
                 </Link>
               )}
-              <h2>{project.acf["project_title"]}</h2>
+              <h2>{project.title?.rendered}</h2>
               <p>{project.acf["project_description"]}</p>
             </div>
           ))

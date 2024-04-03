@@ -5,9 +5,9 @@ function Stack({ restBase }) {
   const backEndPath = `${restBase}wp-json/wp/v2/posts?_embed&per_page=50&categories=9`;
   const toolsPath = `${restBase}wp-json/wp/v2/posts?_embed&per_page=50&categories=10`;
 
-  const [frontEndSkills, setFrontEndSkills] = useState(null);
-  const [backEndSkills, setBackEndSkills] = useState(null);
-  const [tools, setTools] = useState(null);
+  const [frontEndSkills, setFrontEndSkills] = useState([]);
+  const [backEndSkills, setBackEndSkills] = useState([]);
+  const [tools, setTools] = useState([]);
 
   // front end use effect
   useEffect(() => {
@@ -16,7 +16,6 @@ function Stack({ restBase }) {
       if (response.ok) {
         const data = await response.json();
         setFrontEndSkills(data);
-        // console.log(data[0]._embedded["wp:featuredmedia"][0].link);
       }
     };
     fetchSkills();
@@ -41,6 +40,7 @@ function Stack({ restBase }) {
       if (response.ok) {
         const data = await response.json();
         setTools(data);
+        console.log(data);
       }
     };
     fetchTools();
@@ -48,22 +48,55 @@ function Stack({ restBase }) {
 
   return (
     <section className="stack" id="stack">
+      <h1>Stack</h1>
       {frontEndSkills && frontEndSkills.length > 0 && (
         <>
-          <h1>Stack</h1>
-          <div className="skills-container">
-            {frontEndSkills.map((skill) => (
-              <div key={skill.id} className="skill-item">
-                <img
-                  src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
-                  alt={skill.title.rendered}
-                />
-                <div className="skill-content">
-                  <b className="skill-title">{skill.title.rendered}</b>
-                  <p className="skill-description">{skill.acf.description}</p>
+          <div className="skills-container-parent">
+            <div className="skills-container">
+              {frontEndSkills.map((skill) => (
+                <div key={skill.id} className="skill-item">
+                  {/* render the category title */}
+                  <img
+                    src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
+                    alt={skill.title.rendered}
+                  />
+                  <div className="skill-content">
+                    {/* <b className="skill-title">{skill.title.rendered}</b>
+                  <p className="skill-description">{skill.acf.description}</p> */}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <div className="skills-container">
+              {backEndSkills.map((skill) => (
+                <div key={skill.id} className="skill-item">
+                  <img
+                    src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
+                    alt={skill.title.rendered}
+                  />
+                  <div className="skill-content">
+                    {/* <b className="skill-title">{skill.title.rendered}</b>
+                  <p className="skill-description">{skill.acf.description}</p> */}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="skills-container">
+              {tools.map((skill) => (
+                <div key={skill.id} className="skill-item">
+                  <img
+                    src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
+                    alt={skill.title.rendered}
+                  />
+                  <div className="skill-content">
+                    {/* <b className="skill-title">{skill.title.rendered}</b>
+                  <p className="skill-description">{skill.acf.description}</p> */}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </>
       )}

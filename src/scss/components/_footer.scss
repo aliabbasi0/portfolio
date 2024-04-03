@@ -1,6 +1,7 @@
 footer {
   text-align: center;
   font-size: small;
+  margin-bottom: 4.5rem;
   ul {
     list-style-type: none;
     padding: 0;
@@ -47,5 +48,11 @@ footer {
       opacity: 1;
       transition-delay: 0s;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    margin-bottom: 0;
   }
 }

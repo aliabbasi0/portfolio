@@ -1,11 +1,17 @@
-.site-single {
+.page-single {
+  h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  p{
+    line-height: 1.5;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .site-single {
-    h1 {
-      margin-top: 5rem;
-      color: red;
-    }
+  .page-single {
+    margin-top: 0;
   }
 }

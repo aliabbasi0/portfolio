@@ -1,27 +1,56 @@
 import { HashLink as Link } from "react-router-hash-link";
+import HomeIcon from "../assets/home-icon.svg";
+import PortfolioIcon from "../assets/portfolio-icon.svg";
+import StackIcon from "../assets/stack-icon.svg";
+import AboutIcon from "../assets/about-icon.svg";
+import { useState, useEffect } from "react";
 
 function Nav() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <nav className="site-nav">
       <ul>
         <li>
           <Link smooth to="/#hero">
-            Home
+            {isMobile ? (
+              <img src={HomeIcon} alt="Home Icon" />
+            ) : (
+              <span>Home</span>
+            )}
           </Link>
         </li>
         <li>
           <Link smooth to="/#portfolio">
-            Portfolio
+            {isMobile ? (
+              <img src={PortfolioIcon} alt="Portfolio Icon" />
+            ) : (
+              <span>Portfolio</span>
+            )}
           </Link>
         </li>
         <li>
           <Link smooth to="/#stack">
-            Stack
+            {isMobile ? (
+              <img src={StackIcon} alt="Stack Icon" />
+            ) : (
+              <span>Stack</span>
+            )}
           </Link>
         </li>
         <li>
           <Link smooth to="/#about">
-            About
+            {isMobile ? (
+              <img src={AboutIcon} alt="About Icon" />
+            ) : (
+              <span>About</span>
+            )}
           </Link>
         </li>
       </ul>

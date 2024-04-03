@@ -9,10 +9,12 @@ function Hero({ restData }) {
         <span className="closing">&lt;/&gt;</span>
       </div>
       <div className="site-hero__content">
-        <p className="intro">
-          {restData.acf ? restData.acf.introduction_text : ""}
-        </p>
-        <h1>{restData.acf ? restData.acf.name : ""}</h1>
+        <h1>
+          <span className="intro">
+            {restData.acf ? restData.acf.introduction_text : ""}
+          </span>
+          {restData.acf ? restData.acf.name : ""}
+        </h1>
         <h2>{restData.acf ? restData.acf.title : ""}</h2>
         <p className="qualification">
           {restData.acf ? restData.acf.qualification : ""}

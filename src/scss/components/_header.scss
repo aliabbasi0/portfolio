@@ -1,33 +1,47 @@
 .site-header {
+  padding: 0.6rem 0;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  .site-nav {
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16%;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline;
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: bold;
+          color: white;
+          &:hover {
+            color: #ff0098;
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-nav li a img {
+  width: 24px;
 }
 
 @media screen and (min-width: 768px) {
   .site-header {
-    background-color: black;
     padding: 1rem 1rem 1rem 0;
-    width: 100%;
-    position: fixed;
     top: 0;
+    bottom: auto;
     .site-nav {
       ul {
-        list-style-type: none;
-        display: flex;
         justify-content: flex-end;
-        padding: 0;
-        margin: 0;
-        li {
-          display: inline;
-          margin: 0 1.5rem;
-          a {
-            text-transform: uppercase;
-            text-decoration: none;
-            font-weight: bold;
-            color: white;
-            &:hover {
-              color: #d81778;
-            }
-          }
-        }
+        gap: 5%;
       }
     }
   }

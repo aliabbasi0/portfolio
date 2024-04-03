@@ -11,7 +11,6 @@
     margin-bottom: 1rem;
   }
 
-  // the accordion item
   .chakra-accordion__item {
     line-height: 1.5;
     button {
@@ -32,20 +31,16 @@
   }
 
   .chakra-collapse {
-    strong {
-      display: block;
+    p {
+      margin: 1rem 0;
+    }
+    li {
+      list-style-type: square;
     }
   }
 
-  .css-1ggg8my {
-    span {
-      font-weight: bold;
-      text-transform: capitalize;
-    }
-    img {
-      width: 24px;
-      height: 24px;
-      margin-right: 1rem;
-    }
+  .about-images {
+    width: 290px;
+    margin-right: 1px;
   }
 }
