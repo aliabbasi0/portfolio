@@ -4,7 +4,7 @@ function Hero({ restData }) {
       <div className="site-hero__logo">
         <span className="opening">&lt;&gt;</span>
         {restData.acf && restData.acf.logo && (
-          <img src={restData.acf.logo.url} alt="Logo" referrerPolicy="off" />
+          <img loading="lazy" src={restData.acf.logo.url} alt="Logo" referrerPolicy="off" />
         )}
         <span className="closing">&lt;/&gt;</span>
       </div>

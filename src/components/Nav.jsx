@@ -20,7 +20,7 @@ function Nav() {
         <li>
           <Link smooth to="/#hero">
             {isMobile ? (
-              <img src={HomeIcon} alt="Home Icon" />
+              <img loading="lazy" src={HomeIcon} alt="Home Icon" />
             ) : (
               <span>Home</span>
             )}
@@ -29,7 +29,7 @@ function Nav() {
         <li>
           <Link smooth to="/#portfolio">
             {isMobile ? (
-              <img src={PortfolioIcon} alt="Portfolio Icon" />
+              <img loading="lazy" src={PortfolioIcon} alt="Portfolio Icon" />
             ) : (
               <span>Portfolio</span>
             )}
@@ -38,7 +38,7 @@ function Nav() {
         <li>
           <Link smooth to="/#stack">
             {isMobile ? (
-              <img src={StackIcon} alt="Stack Icon" />
+              <img loading="lazy" src={StackIcon} alt="Stack Icon" />
             ) : (
               <span>Stack</span>
             )}
@@ -47,7 +47,7 @@ function Nav() {
         <li>
           <Link smooth to="/#about">
             {isMobile ? (
-              <img src={AboutIcon} alt="About Icon" />
+              <img loading="lazy" src={AboutIcon} alt="About Icon" />
             ) : (
               <span>About</span>
             )}

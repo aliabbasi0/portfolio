@@ -17,13 +17,17 @@ const Home = ({ restBase }) => {
       const response = await fetch(restPath);
       if (response.ok) {
         const data = await response.json();
+        return data;
+      }
+      throw new Error("Failed to fetch");
+    };
+    const delay = new Promise((resolve) => setTimeout(resolve, 3800));
+    Promise.all([fetchData(), delay])
+      .then(([data]) => {
         setData(data);
         setLoadStatus(true);
-      } else {
-        setLoadStatus(false);
-      }
-    };
-    fetchData();
+      })
+      .catch(() => setLoadStatus(false));
   }, [restPath]);
 
   return (
@@ -36,9 +40,9 @@ const Home = ({ restBase }) => {
           <About restData={restData} />
         </article>
       ) : (
-        <p className="loading">
-          <span>Loading...</span>
-        </p>
+        <div className="loader-body">
+          <div className="loader"></div>
+        </div>
       )}
     </>
   );

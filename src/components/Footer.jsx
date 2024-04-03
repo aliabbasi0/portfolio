@@ -2,15 +2,15 @@ import { getCurrentYear } from "../utilities/functions";
 import EmailIcon from "../assets/iconmonstr-email-10.svg";
 import LinkedInIcon from "../assets/iconmonstr-linkedin-4.svg";
 import GitHubIcon from "../assets/iconmonstr-github-4.svg";
-import EmailTooltip from "./EmailTooltip";
 
 function footer() {
   return (
     <footer>
       <ul>
         <li>
-          <EmailTooltip icon={EmailIcon} email="aliabbasi0@outlook.com" />
-          {/* <img src={EmailIcon} alt="Email Icon" /> */}
+          <a href="mailto:aliabbasi0@outlook.com">
+            <img loading="lazy" src={EmailIcon} alt="Email Icon" />
+          </a>
         </li>
         <li>
           <a
@@ -18,7 +18,7 @@ function footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={LinkedInIcon} alt="LinkedIn Icon" />
+            <img loading="lazy" src={LinkedInIcon} alt="LinkedIn Icon" />
           </a>
         </li>
         <li>
@@ -27,7 +27,7 @@ function footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={GitHubIcon} alt="GitHub Icon" />
+            <img loading="lazy" src={GitHubIcon} alt="GitHub Icon" />
           </a>
         </li>
       </ul>
