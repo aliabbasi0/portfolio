@@ -1,9 +1,11 @@
 .stack {
   padding: 0 1rem;
   .skills-container-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(-45deg, #ff0f7b 0%, #221d31 90%);
     border-radius: 20px;
-    padding: 1rem 0.4rem;
     max-width: 800px;
     margin: 0 auto;
     .skills-container {

@@ -57,6 +57,7 @@ function Stack({ restBase }) {
                   <img
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -66,6 +67,7 @@ function Stack({ restBase }) {
                   <img
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -75,6 +77,7 @@ function Stack({ restBase }) {
                   <img
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
+                    loading="lazy"
                   />
                 </div>
               ))}
