@@ -10,11 +10,6 @@ import {
 
 import { Box } from "@chakra-ui/layout";
 
-//                 <img
-//                   src={restMedia?.[2]?.guid?.rendered}
-//                   alt={restMedia?.[2]?.alt_text}
-//                 />
-
 function About({ restData }) {
   return (
     <section id="about" className="site-about">

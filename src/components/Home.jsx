@@ -49,5 +49,3 @@ const Home = ({ restBase }) => {
 };
 
 export default Home;
-
-// App --> router for external pages

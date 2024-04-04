@@ -81,7 +81,9 @@ function ProjectDetails({ restBase }) {
           <h2>{restData.acf?.["what_i_learned_title"]}</h2>
           <p>{restData.acf?.["what_i_learned_explained"]}</p>
           <div className="next-project">
-            <HashLink to="/#portfolio"><button>Back to Portfolio</button></HashLink>
+            <HashLink to="/#portfolio">
+              <button>Back to Portfolio</button>
+            </HashLink>
             {nextProject && (
               <HashLink to={`/project/${nextProject.slug}`}>
                 <button>Next: {nextProject.title?.rendered}</button>

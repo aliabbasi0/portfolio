@@ -54,15 +54,10 @@ function Stack({ restBase }) {
             <div className="skills-container">
               {frontEndSkills.map((skill) => (
                 <div key={skill.id} className="skill-item">
-                  {/* render the category title */}
                   <img
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
                   />
-                  <div className="skill-content">
-                    {/* <b className="skill-title">{skill.title.rendered}</b>
-                  <p className="skill-description">{skill.acf.description}</p> */}
-                  </div>
                 </div>
               ))}
 
@@ -72,10 +67,6 @@ function Stack({ restBase }) {
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
                   />
-                  <div className="skill-content">
-                    {/* <b className="skill-title">{skill.title.rendered}</b>
-                  <p className="skill-description">{skill.acf.description}</p> */}
-                  </div>
                 </div>
               ))}
 
@@ -85,10 +76,6 @@ function Stack({ restBase }) {
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
                   />
-                  <div className="skill-content">
-                    {/* <b className="skill-title">{skill.title.rendered}</b>
-                  <p className="skill-description">{skill.acf.description}</p> */}
-                  </div>
                 </div>
               ))}
             </div>

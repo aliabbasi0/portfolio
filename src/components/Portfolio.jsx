@@ -39,7 +39,7 @@ function Portfolio({ restBase }) {
             </Link>
           ))
         ) : (
-          <p>No projects found.</p>
+          <p>Porjects on its way..</p>
         )}
       </div>
     </section>
