@@ -47,7 +47,7 @@ function Stack({ restBase }) {
 
   return (
     <section className="stack" id="stack">
-      <h1>Stack</h1>
+      <h3>Stack</h3>
       {frontEndSkills && frontEndSkills.length > 0 && (
         <>
           <div className="skills-container-parent">

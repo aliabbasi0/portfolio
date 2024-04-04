@@ -27,7 +27,12 @@ function Nav() {
         <li>
           <HashLink smooth to="/#hero" scroll={(el) => scrollwithDelay(el)}>
             {isMobile ? (
-              <img loading="lazy" src={HomeIcon} alt="Home Icon" />
+              <img
+                className="home-icon"
+                loading="lazy"
+                src={HomeIcon}
+                alt="Home Icon"
+              />
             ) : (
               <span>Home</span>
             )}

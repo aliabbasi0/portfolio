@@ -13,12 +13,12 @@ import { Box } from "@chakra-ui/layout";
 function About({ restData }) {
   return (
     <section id="about" className="site-about">
-      <h1>About</h1>
-      <Accordion allowMultiple>
+      <h3>About</h3>
+      <Accordion defaultIndex={0} allowMultiple>
         {restData.acf?.accordion_item?.map((item, index) => {
           return (
             <AccordionItem key={index}>
-              <h2>
+              <h4>
                 <AccordionButton>
                   <Box
                     as="span"
@@ -31,7 +31,7 @@ function About({ restData }) {
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
-              </h2>
+              </h4>
               <AccordionPanel
                 pb={4}
                 dangerouslySetInnerHTML={createMarkup(item.section_content)}

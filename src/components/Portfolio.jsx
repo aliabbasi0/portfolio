@@ -20,7 +20,7 @@ function Portfolio({ restBase }) {
 
   return (
     <section id="portfolio" className="site-portfolio">
-      <h1>Portfolio</h1>
+      <h3>Portfolio</h3>
       <div className="gallery">
         {restProjects.length > 0 ? (
           restProjects.map((project) => (
