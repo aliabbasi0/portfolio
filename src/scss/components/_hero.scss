@@ -2,6 +2,10 @@
   margin-top: 5rem;
   max-width: auto;
   .site-hero__logo {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     display: flex;
     justify-content: flex-start;
     span {

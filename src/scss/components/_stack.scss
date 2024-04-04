@@ -8,13 +8,15 @@
       .skill-item {
         display: flex;
         img {
-          width: 60px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          width: 57px;
           border-bottom: 2px solid black;
         }
       }
     }
-  }
-  @media only screen and (min-width: 768px){
   }
 }
 

@@ -6,6 +6,13 @@ import AboutIcon from "../assets/about-icon.svg";
 import { useState, useEffect } from "react";
 
 function Nav() {
+  const scrollwithDelay = (el) => {
+    setTimeout(() => {
+      console.log("scroll with delay");
+      el.scrollIntoView({ behavior: "smooth" });
+    }, "500");
+  };
+
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -18,7 +25,7 @@ function Nav() {
     <nav className="site-nav">
       <ul>
         <li>
-          <HashLink smooth to="/#hero">
+          <HashLink smooth to="/#hero" scroll={(el) => scrollwithDelay(el)}>
             {isMobile ? (
               <img loading="lazy" src={HomeIcon} alt="Home Icon" />
             ) : (
@@ -27,7 +34,11 @@ function Nav() {
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#portfolio">
+          <HashLink
+            smooth
+            to="/#portfolio"
+            scroll={(el) => scrollwithDelay(el)}
+          >
             {isMobile ? (
               <img loading="lazy" src={PortfolioIcon} alt="Portfolio Icon" />
             ) : (
@@ -36,7 +47,7 @@ function Nav() {
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#stack">
+          <HashLink smooth to="/#stack" scroll={(el) => scrollwithDelay(el)}>
             {isMobile ? (
               <img loading="lazy" src={StackIcon} alt="Stack Icon" />
             ) : (
@@ -45,7 +56,7 @@ function Nav() {
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#about">
+          <HashLink smooth to="/#about" scroll={(el) => scrollwithDelay(el)}>
             {isMobile ? (
               <img loading="lazy" src={AboutIcon} alt="About Icon" />
             ) : (

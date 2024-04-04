@@ -1,10 +1,19 @@
 .page-single {
+  padding: 0 1rem;
   h1 {
     text-align: center;
     margin: 0;
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
+  .tech-stack {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
   p {
     line-height: 1.5;
   }
@@ -13,6 +22,10 @@
     height: auto;
     border-bottom: 1px solid black;
     margin-bottom: 2rem;
+  }
+  .next-project {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
