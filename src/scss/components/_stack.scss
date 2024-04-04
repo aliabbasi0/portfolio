@@ -1,19 +1,16 @@
 .stack {
   padding: 0 1rem;
   .skills-container-parent {
+    background: linear-gradient(-45deg, #ff0f7b 0%, #221D31 90%);
+    border-radius: 20px;
     .skills-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
       .skill-item {
-        display: flex;
         img {
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          width: 57px;
-          border-bottom: 2px solid black;
+          width: 3rem;
         }
       }
     }

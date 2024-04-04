@@ -65,9 +65,7 @@ function Stack({ restBase }) {
                   </div>
                 </div>
               ))}
-            </div>
 
-            <div className="skills-container">
               {backEndSkills.map((skill) => (
                 <div key={skill.id} className="skill-item">
                   <img
@@ -80,9 +78,7 @@ function Stack({ restBase }) {
                   </div>
                 </div>
               ))}
-            </div>
 
-            <div className="skills-container">
               {tools.map((skill) => (
                 <div key={skill.id} className="skill-item">
                   <img

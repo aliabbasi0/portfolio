@@ -1,5 +1,5 @@
 .site-header {
-  padding: 0.6rem 0;
+  padding: 1rem 0;
   width: 100%;
   background-color: black;
   position: fixed;
@@ -11,7 +11,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 3.5rem;
+      gap: 15vw;
       padding: 0;
       margin: 0;
       li {
@@ -40,13 +40,13 @@
 
 @media screen and (min-width: 768px) {
   .site-header {
-    padding: 1rem 1rem 1rem 0;
+    padding: 1rem 3rem 1rem 0;
     top: 0;
     bottom: auto;
     .site-nav {
       ul {
         justify-content: flex-end;
-        margin-right: 1rem;
+        gap: 2rem;
       }
     }
   }

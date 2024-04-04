@@ -1,5 +1,12 @@
 .page-single {
   padding: 0 1rem;
+  img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
   h1 {
     text-align: center;
     margin: 0;
@@ -17,15 +24,10 @@
   p {
     line-height: 1.5;
   }
-  img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid black;
-    margin-bottom: 2rem;
-  }
   .next-project {
     display: flex;
     justify-content: space-between;
+    margin: 2rem 0;
   }
 }
 

@@ -21,7 +21,7 @@ const Home = ({ restBase }) => {
       }
       throw new Error("Failed to fetch");
     };
-    const delay = new Promise((resolve) => setTimeout(resolve, 1500));
+    const delay = new Promise((resolve) => setTimeout(resolve, 2000));
     Promise.all([fetchData(), delay])
       .then(([data]) => {
         setData(data);

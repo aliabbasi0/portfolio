@@ -58,34 +58,33 @@ function ProjectDetails({ restBase }) {
           <h1>{restData.acf?.["project_title"]}</h1>
           <p className="tech-stack">{restData.acf?.["tech_stack"]}</p>
           <div className="direct-links">
-            <button className="btn-69">
-              <a
-                href={restData.acf?.["live_site"]}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View Live Site
-              </a>
-            </button>
-            <button className="btn-69">
-              <a
-                href={restData.acf?.["github_repository"]}
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on GitHub
-              </a>
-            </button>
+            <a
+              className="btn-69"
+              href={restData.acf?.["live_site"]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Site
+            </a>
+            <a
+              className="btn-69"
+              href={restData.acf?.["github_repository"]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Code
+            </a>
           </div>
+
           <h2>{restData.acf?.["overview_title"]}</h2>
           <p>{restData.acf?.["overview_explained"]}</p>
           <h2>{restData.acf?.["what_i_learned_title"]}</h2>
           <p>{restData.acf?.["what_i_learned_explained"]}</p>
           <div className="next-project">
-            <HashLink to="/#portfolio">Back to Portfolio</HashLink>
+            <HashLink to="/#portfolio"><button>Back to Portfolio</button></HashLink>
             {nextProject && (
               <HashLink to={`/project/${nextProject.slug}`}>
-                Next: {nextProject.acf?.["project_title"]}
+                <button>Next: {nextProject.title?.rendered}</button>
               </HashLink>
             )}
           </div>
