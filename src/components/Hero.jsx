@@ -1,13 +1,9 @@
+import Clock from "./Clock";
+
 function Hero({ restData }) {
   return (
     <section id="hero" className="site-hero">
-      <div className="site-hero__logo">
-        <span className="opening">&lt;&gt;</span>
-        {restData.acf && restData.acf.logo && (
-          <img loading="lazy" src={restData.acf.logo.url} alt="Logo" referrerPolicy="off" />
-        )}
-        <span className="closing">&lt;/&gt;</span>
-      </div>
+      <Clock />
       <div className="site-hero__content">
         <h1>
           <span className="intro">

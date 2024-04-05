@@ -23,10 +23,19 @@ footer {
   }
 }
 
-
-
 @media screen and (min-width: 768px) {
   footer {
     margin-bottom: 0;
+    ul {
+      li {
+        a {
+          &:hover {
+            img {
+              border: 1px solid black;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -54,4 +54,11 @@
       }
     }
   }
+  .site-header a {
+    transition: 0.25s ease;
+  }
+
+  .site-header ul:hover li a {
+    color: #848282;
+  }
 }
