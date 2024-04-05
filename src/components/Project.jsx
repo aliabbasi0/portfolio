@@ -1,9 +1,11 @@
 import { HashLink } from "react-router-hash-link";
+
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 function Project({ restBase }) {
   const { slug } = useParams();
+
   const restPath = `${restBase}wp-json/wp/v2/project?slug=${slug}&_embed&acf_format=standard`;
   const projectsPath = `${restBase}wp-json/wp/v2/project?_embed&acf_format=standard`;
 
