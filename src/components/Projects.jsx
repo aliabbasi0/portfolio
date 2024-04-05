@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function Portfolio({ restBase }) {
+function Projects({ restBase }) {
   const projectPath = `${restBase}wp-json/wp/v2/project?_embed`;
   const [restProjects, setProjects] = useState([]);
 
@@ -25,7 +25,7 @@ function Portfolio({ restBase }) {
         {restProjects.length > 0 ? (
           restProjects.map((project) => (
             <Link to={`/project/${project.slug}`} key={project.id}>
-              <article className="card" >
+              <article className="card">
                 {project._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
                   <figure>
                     <img
@@ -46,4 +46,4 @@ function Portfolio({ restBase }) {
   );
 }
 
-export default Portfolio;
+export default Projects;

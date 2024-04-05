@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Hero from "./Hero";
-import Portfolio from "./Portfolio";
+import Projects from "./Projects";
 import About from "./About";
 import Stack from "./Stack";
 
@@ -35,7 +35,7 @@ const Home = ({ restBase }) => {
       {isLoaded && restData ? (
         <article id={`post-${restData.id}`}>
           <Hero restData={restData} />
-          <Portfolio restBase={restBase} />
+          <Projects restBase={restBase} />
           <Stack restBase={restBase} />
           <About restData={restData} />
         </article>

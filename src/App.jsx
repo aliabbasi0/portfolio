@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Home from "./components/Home";
-import ProjectDetails from "./components/ProjectDetails";
+import Project from "./components/Project";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import "./scss/styles.scss";
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home restBase={restBase} />} />
           <Route
             path="/project/:slug"
-            element={<ProjectDetails restBase={restBase} />}
+            element={<Project restBase={restBase} />}
           />
         </Routes>
       </main>

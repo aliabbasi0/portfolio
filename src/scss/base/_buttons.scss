@@ -1,5 +1,5 @@
 /*
- * inspired from: https://ui-buttons.web.app/
+ * btn-69 nspired from: https://ui-buttons.web.app/
 */
 
 .direct-links {
@@ -21,7 +21,6 @@
 .btn-69 {
   -webkit-tap-highlight-color: transparent;
   background-color: #222;
-  background-image: none;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
@@ -135,4 +134,13 @@
     height: 100%;
     width: 100%;
   }
+}
+
+.btn-17 {
+  background-color: #c0b7b7;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -2,7 +2,7 @@ import { HashLink } from "react-router-hash-link";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function ProjectDetails({ restBase }) {
+function Project({ restBase }) {
   const { slug } = useParams();
   const restPath = `${restBase}wp-json/wp/v2/project?slug=${slug}&_embed&acf_format=standard`;
   const projectsPath = `${restBase}wp-json/wp/v2/project?_embed&acf_format=standard`;
@@ -82,11 +82,13 @@ function ProjectDetails({ restBase }) {
           <p>{restData.acf?.["what_i_learned_explained"]}</p>
           <div className="next-project">
             <HashLink to="/#portfolio">
-              <button>Back to Portfolio</button>
+              <button className="btn-17">Back to Portfolio</button>
             </HashLink>
             {nextProject && (
               <HashLink to={`/project/${nextProject.slug}`}>
-                <button>Next: {nextProject.title?.rendered}</button>
+                <button className="btn-17">
+                  Next: {nextProject.title?.rendered}
+                </button>
               </HashLink>
             )}
           </div>
@@ -96,4 +98,4 @@ function ProjectDetails({ restBase }) {
   );
 }
 
-export default ProjectDetails;
+export default Project;

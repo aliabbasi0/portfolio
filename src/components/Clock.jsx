@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "../scss/components/_clock.scss";
 
 function Clock() {
   const [showDot, setShowDot] = useState(true);
