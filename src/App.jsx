@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <Link smooth to="/#projects" className="skip-link">
+      <Link smooth to="/#projects" className="screen-reader-text">
         Skip to Content
       </Link>
       <Header />

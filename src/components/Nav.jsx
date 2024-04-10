@@ -4,15 +4,9 @@ import PortfolioIcon from "../assets/portfolio-icon.svg";
 import StackIcon from "../assets/stack-icon.svg";
 import AboutIcon from "../assets/about-icon.svg";
 import { useState, useEffect } from "react";
+import { scrollwithDelay } from "../utilities/functions";
 
 function Nav() {
-  const scrollwithDelay = (el) => {
-    setTimeout(() => {
-      console.log("scroll with delay");
-      el.scrollIntoView({ behavior: "smooth" });
-    }, "500");
-  };
-
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -39,11 +33,7 @@ function Nav() {
           </HashLink>
         </li>
         <li>
-          <HashLink
-            smooth
-            to="/#portfolio"
-            scroll={(el) => scrollwithDelay(el)}
-          >
+          <HashLink smooth to="/#projects" scroll={(el) => scrollwithDelay(el)}>
             {isMobile ? (
               <img loading="lazy" src={PortfolioIcon} alt="Portfolio Icon" />
             ) : (

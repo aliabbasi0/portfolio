@@ -58,6 +58,7 @@ function Stack({ restBase }) {
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
                     loading="lazy"
+                    title={skill.title.rendered}
                   />
                 </div>
               ))}
@@ -68,6 +69,7 @@ function Stack({ restBase }) {
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
                     loading="lazy"
+                    title={skill.title.rendered}
                   />
                 </div>
               ))}
@@ -78,6 +80,7 @@ function Stack({ restBase }) {
                     src={skill._embedded?.["wp:featuredmedia"]?.[0]?.link}
                     alt={skill.title.rendered}
                     loading="lazy"
+                    title={skill.title.rendered}
                   />
                 </div>
               ))}

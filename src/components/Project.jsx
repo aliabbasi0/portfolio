@@ -39,6 +39,8 @@ function Project({ restBase }) {
         const nextIndex = currentIndex + 1;
         if (nextIndex < projects.length) {
           setNextProject(projects[nextIndex]);
+        }else{
+          setNextProject(null);
         }
       }
     };

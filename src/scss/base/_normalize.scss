@@ -407,27 +407,3 @@ video {
   width: auto;
   z-index: 100000;
 }
-
-.skip-link {
-  position: absolute;
-  left: -999px;
-  top: -999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: 1;
-
-  &:focus {
-    left: auto;
-    top: auto;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    color: #fff;
-    background-color: black;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.2em;
-  }
-}

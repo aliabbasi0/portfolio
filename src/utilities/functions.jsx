@@ -13,4 +13,11 @@ const getCurrentYear = () => {
   return new Date().getFullYear();
 };
 
-export { scrollToSection, getCurrentYear, createMarkup };
+const scrollwithDelay = (el) => {
+  setTimeout(() => {
+    console.log("scroll with delay");
+    el.scrollIntoView({ behavior: "smooth" });
+  }, "500");
+};
+
+export { scrollToSection, getCurrentYear, createMarkup, scrollwithDelay };
