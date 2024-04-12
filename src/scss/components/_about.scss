@@ -1,14 +1,35 @@
 .site-about {
   padding: 0 1rem;
 
+  .css-1ggg8my {
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    b {
+      font-size: 1.1rem;
+      display: block;
+    }
+  }
+
   // my portrait
-  .wp-image-151 {
-    margin: 0 auto;
+  .portrait {
+    width: 200px;
     display: block;
     border-radius: 50%;
     border: 3px solid black;
-    width: 200px;
-    margin-bottom: 1rem;
   }
 
   .chakra-accordion__item {
@@ -16,18 +37,14 @@
     button {
       background-color: transparent;
       border: none;
-      border-top: 2px solid black;
-      border-radius: 0.375rem;
-      display: flex;
-      font-size: 1.2rem;
+      border-bottom: 1px solid black;
       font-weight: 500;
-      justify-content: space-between;
-      padding: 1rem;
       cursor: pointer;
     }
   }
 
   .chakra-collapse {
+    margin: 0 2rem;
     p {
       margin: 1rem 0;
     }
@@ -40,5 +57,19 @@
     width: 290px;
     margin-right: 1px;
     border: 2px solid black;
+  }
+
+  @media screen and (min-width: 768px) {
+    .about-me {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .portrait {
+      width: 340px;
+    }
+    .left {
+      align-items: center;
+    }
   }
 }
