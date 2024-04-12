@@ -1,5 +1,5 @@
 .site-header {
-  padding: env(safe-area-inset-bottom) 0;
+  padding: calc(0.5rem + env(safe-area-inset-bottom)) 0;
   width: 100%;
   background-color: black;
   position: fixed;
