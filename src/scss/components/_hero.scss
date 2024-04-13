@@ -3,18 +3,38 @@
   .site-hero__content {
     margin: 0.5rem 1rem;
     text-align: right;
-    .intro {
-      margin-right: 1rem;
-      font-size: 1.5rem;
-      font-weight: 400;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      letter-spacing: 0.05rem;
-      border-bottom: 2px solid #d81778;
+    .container {
+      display: inline-block;
+
+      .hello {
+        padding-right: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+      .text {
+        margin: 0;
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        border-right: 3px solid black;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3s, cursor 0.4s step-end infinite alternate;
+      }
+      @keyframes cursor {
+        50% {
+          border-right-color: transparent;
+        }
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
     }
     h2 {
+      border-top: 2px solid #d81778;
       padding-top: 0.4rem;
       font-size: 1.6rem;
       font-weight: 600;

@@ -6,12 +6,14 @@ function Hero({ restData }) {
       <section id="hero" className="site-hero">
         <Clock />
         <div className="site-hero__content">
-          <h1>
-            <span className="intro">
-              {restData.acf ? restData.acf.introduction_text : ""}
-            </span>
-            {restData.acf ? restData.acf.name : ""}
-          </h1>
+          <div className="container">
+            <p className="text">
+              <span className="hello">
+                {restData.acf ? restData.acf.introduction_text : ""}
+              </span>
+              {restData.acf ? restData.acf.name : ""}
+            </p>
+          </div>
           <h2>{restData.acf ? restData.acf.title : ""}</h2>
           <p className="qualification">
             {restData.acf ? restData.acf.qualification : ""}
