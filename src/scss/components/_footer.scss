@@ -1,8 +1,8 @@
 footer {
   text-align: center;
   font-size: small;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
   ul {
     list-style-type: none;
     padding: 0;
@@ -32,7 +32,7 @@ footer {
         a {
           &:hover {
             img {
-              border: 1px solid black;
+              scale: 1.1;
             }
           }
         }

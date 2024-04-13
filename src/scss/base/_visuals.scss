@@ -4,7 +4,7 @@ section {
 }
 
 h3 {
-  margin: 3rem 0;
+  margin: 5rem 0;
   font-size: 1.7rem;
   text-align: center;
 }
@@ -12,5 +12,6 @@ h3 {
 @media screen and (min-width: 768px) {
   h3 {
     text-align: left;
+    margin-top: 6rem;
   }
 }
